@@ -8,351 +8,496 @@
     <!-- Tailwind  -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
 </head>
+
+<style>
+
+html, body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    width: 100%; /* Ensures full width */
+}
+  html {
+  scroll-behavior: smooth;
+}
+
+</style>
+
 <body>
 
-    <nav class="bg-neutral-900 border-b border-gray-700 shadow-lg">
-        <div class="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-4">
-          <!-- Logo -->
-          <a href="#" class="text-2xl font-bold text-white">Rizal's Vision</a>
-      
-          <!-- Mobile Menu Button -->
-          <button data-collapse-toggle="navbar-menu" type="button" class="md:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-gray-300 rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<!-- Navigation Bar -->
+<nav data-aos="fade-down" data-aos-duration="1000" class="bg-neutral-900 border-b border-gray-700 shadow-lg fixed w-full top-0 z-50">
+  <div class="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-4">
+      <!-- Logo -->
+      <a href="#" class="text-2xl font-bold text-yellow-500 tracking-wide">Rizal's Life</a>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" type="button" class="md:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-gray-300 rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
-      
-          <!-- Navigation Links -->
-          <div class="hidden md:flex items-center space-x-8" id="navbar-menu">
-            <a href="#" class="text-gray-300 font-medium hover:text-white transition">Home</a>
-            <a href="#" class="text-gray-300 font-medium hover:text-white transition">About</a>
-            <a href="#" class="text-gray-300 font-medium hover:text-white transition">Services</a>
-            <a href="#" class="text-gray-300 font-medium hover:text-white transition">Pricing</a>
-            <a href="#" class="text-gray-300 font-medium hover:text-white transition">Contact</a>
-          </div>
-        </div>
-      </nav>
-      
-      
-      <section class="h-screen bg-neutral-900 flex items-center">
-        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
-          <div class="md:w-1/2 text-center md:text-left">
-            <h1 class="text-6xl font-extrabold text-yellow-500">The Philippines a Century Hence</h1>
-            <p class="text-2xl text-gray-300 mt-4 italic">By Jose Rizal</p>
-            <p class="text-lg text-gray-400 mt-6 leading-relaxed">
-                José Rizal's essay envisions the future of the Philippines under colonial rule, exploring the possible outcomes of independence, assimilation, or continued oppression. 
-                e warns of the dangers of inaction and highlights the importance of national identity and progress—ideas that remain relevant today.
-            </p>
-            <button class="mt-6 px-6 py-3 bg-yellow-600 text-neutral-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">
-              Read More
-            </button>
-          </div>
-          <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center">
-            <img src="src/images/rizal.jpg" alt="The Philippines a Century Hence" class="w-full max-w-md rounded-lg shadow-lg border-4 border-yellow-500">
-          </div>
-        </div>
-      </section>
+          </svg>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="hidden md:flex items-center space-x-8" id="navbar-menu">
+          <a href="#home" class="nav-link text-gray-300 font-medium hover:text-yellow-600 transition duration-300">Home</a>
+          <a href="#introduction" class="nav-link text-gray-300 font-medium hover:text-yellow-600 transition duration-300">Introduction</a>
+          <a href="#works" class="nav-link text-gray-300 font-medium hover:text-yellow-600 transition duration-300">Works</a>
+          <a href="#analysis" class="nav-link text-gray-300 font-medium hover:text-yellow-600 transition duration-300">Analysis</a>
+          <a href="#gallery" class="nav-link text-gray-300 font-medium hover:text-yellow-600 transition duration-300">Gallery</a>
+          <a href="#resources" class="nav-link text-gray-300 font-medium hover:text-yellow-600 transition duration-300">Resources</a>
+      </div>
+  </div>
+</nav>
 
 
-      <section class="h-screen bg-neutral-900 flex items-center">
-        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
-          <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center">
-            <img src="src/images/book_image.jpg" alt="Introduction to The Philippines a Century Hence" class="w-full max-w-md rounded-lg shadow-lg border-4 border-yellow-500">
-          </div>
-          <div class="md:w-1/2 text-center md:text-left">
-            <h2 class="text-5xl font-extrabold text-yellow-500">Introduction</h2>
-            <p class="text-lg text-gray-400 mt-6 leading-relaxed">
-              <i>The Philippines a Century Hence</i> is a thought-provoking work by José Rizal, written between 1889 and 1890.  
-              It presents a visionary analysis of the country's future under Spanish rule, exploring themes of independence,  
-              colonial oppression, and the role of education in national progress.
-            </p>
-            <p class="text-lg text-gray-400 mt-4 leading-relaxed">
-              Rizal argues that if Spain refuses to grant reforms and continues its unjust rule, the Philippines will inevitably  
-              seek freedom, either through peaceful means or revolution. He warns against foreign intervention and highlights  
-              the power of education in shaping a self-sufficient and enlightened Filipino nation.
-            </p>
-            <p class="text-lg text-gray-400 mt-4 leading-relaxed">
-              This analysis remains significant today, offering historical insight into the country's colonial past while serving  
-              as a reminder of the importance of unity, identity, and self-determination in shaping the nation's future.
-            </p>
-          </div>
-        </div>
-      </section>
       
-      <section class="min-h-screen bg-neutral-900 py-16 px-6">
-        <div class="max-w-screen-xl mx-auto">
-          
-          <!-- Section Header -->
-          <div class="text-center">
-            <h2 class="text-5xl font-extrabold text-yellow-500">Works Page</h2>
-            <p class="text-lg text-gray-400 mt-4">
-              Understanding the historical background and key themes of <i>The Philippines a Century Hence</i>.
-            </p>
-          </div>
       
-          <!-- Historical Context -->
-          <div class="mt-16 flex flex-col md:flex-row items-center gap-12">
-            
-            <!-- Text Content -->
-            <div class="md:w-2/3">
-              <h3 class="text-3xl font-bold text-yellow-400">Historical Context</h3>
-              <p class="text-lg text-gray-300 mt-4 leading-relaxed">
-                Written between 1889 and 1890, <i>The Philippines a Century Hence</i> emerged during 
-                a time of heightened oppression and political instability in the country. Spain's colonial rule 
-                was weakening, yet Filipino nationalism was strengthening, fueled by the rise of educated 
-                individuals advocating for reform.
-              </p>
-              <p class="text-lg text-gray-300 mt-4 leading-relaxed">
-                Rizal, during his exile, recognized the need to awaken Filipino consciousness. He believed 
-                that education and national identity were crucial in determining the nation's future, warning of 
-                the consequences of continued Spanish abuses.
-              </p>
-            </div>
-      
-            <!-- Decorative Divider -->
-            <div class="hidden md:block md:w-1/3 border-l-4 border-yellow-500 h-48"></div>
-      
-          </div>
-      
-          <!-- Plot Summary -->
-          <div class="mt-16 flex flex-col md:flex-row-reverse items-center gap-12">
-            
-            <!-- Text Content -->
-            <div class="md:w-2/3">
-              <h3 class="text-3xl font-bold text-yellow-400">Plot Summary</h3>
-              <p class="text-lg text-gray-300 mt-4 leading-relaxed">
-                Rizal presents three possible futures for the Philippines, emphasizing the importance of national identity and self-determination:
-              </p>
-              <ul class="list-disc list-inside text-lg text-gray-300 mt-4 space-y-3">
-                <li><b>Assimilation:</b> If Spain grants equal rights, the Philippines may become a Spanish province, but this was unlikely.</li>
-                <li><b>Continued Oppression:</b> Spanish abuses would lead to deeper unrest, possibly resulting in violent uprisings.</li>
-                <li><b>Independence:</b> If Spain refused to reform, the Filipinos would eventually fight for sovereignty.</li>
-              </ul>
-              <p class="text-lg text-gray-300 mt-4 leading-relaxed">
-                Rizal highlights that education is the key to freedom, empowering Filipinos to resist oppression and shape their destiny. His vision remains relevant, reminding the nation of its rich history and the power of unity.
-              </p>
-            </div>
-      
-            <!-- Decorative Divider -->
-            <div class="hidden md:block md:w-1/3 border-r-4 border-yellow-500 h-48"></div>
-      
-          </div>
-      
-        </div>
-      </section>
+<section id="home" class="min-h-screen bg-neutral-900 flex items-center py-12">
+  <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-12">
 
-      <section class="min-h-screen bg-neutral-900 py-16 px-6">
-        <div class="max-w-screen-xl mx-auto">
-          
-          <!-- Section Header -->
-          <div class="text-center">
-            <h2 class="text-5xl font-extrabold text-yellow-500">Analysis Page</h2>
-            <p class="text-lg text-gray-400 mt-4">
-              A deeper exploration of the themes and lessons from <i>The Philippines a Century Hence</i>.
-            </p>
+    <!-- Text Content -->
+    <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right">
+      <h1 class="text-6xl font-extrabold text-yellow-500 leading-tight">
+        The Philippines a Century Hence
+      </h1>
+      <p class="text-2xl text-gray-300 mt-4 italic">By José Rizal</p>
+      <p class="text-lg text-gray-300 mt-6 leading-relaxed text-justify">
+        José Rizal's essay envisions the future of the Philippines under colonial rule, exploring the possible 
+        outcomes of independence, assimilation, or continued oppression. He warns of the dangers of inaction and 
+        highlights the importance of national identity and progress—ideas that remain relevant today.
+      </p>
+      <button class="mt-6 px-6 py-3 bg-yellow-600 text-neutral-900 font-semibold rounded-lg shadow-md 
+                     hover:bg-yellow-500 transition-all duration-300"
+              data-aos="zoom-in">
+        Read More
+      </button>
+    </div>
+
+    <!-- Image Section -->
+    <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+      <img src="src/images/rizal.jpg" alt="The Philippines a Century Hence" 
+           class="w-full max-w-md rounded-lg shadow-lg border-4 border-yellow-500">
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section id="introduction" class="min-h-screen bg-neutral-900 flex items-center py-12">
+  <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-12">
+
+    <!-- Image Section -->
+    <div class="md:w-1/2 flex justify-center" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+      <img src="src/images/book_image.jpg" alt="Introduction to The Philippines a Century Hence" 
+           class="w-full max-w-md rounded-lg shadow-lg border-4 border-yellow-500">
+    </div>
+
+    <!-- Text Content -->
+    <div class="md:w-1/2 text-center md:text-left" data-aos="fade-left" data-aos-anchor-placement="top-bottom">
+      <h2 class="text-5xl font-extrabold text-yellow-500 mb-6">Introduction</h2>
+      <p class="text-lg text-gray-300 leading-relaxed text-justify">
+        <i>The Philippines a Century Hence</i> is a thought-provoking work by José Rizal, written between 1889 and 1890. 
+        It presents a visionary analysis of the country's future under Spanish rule, exploring themes of independence, 
+        colonial oppression, and the role of education in national progress.
+      </p>
+      <p class="text-lg text-gray-300 mt-4 leading-relaxed text-justify">
+        Rizal argues that if Spain refuses to grant reforms and continues its unjust rule, the Philippines will inevitably 
+        seek freedom, either through peaceful means or revolution. He warns against foreign intervention and highlights 
+        the power of education in shaping a self-sufficient and enlightened Filipino nation.
+      </p>
+      <p class="text-lg text-gray-300 mt-4 leading-relaxed text-justify">
+        This analysis remains significant today, offering historical insight into the country's colonial past while serving 
+        as a reminder of the importance of unity, identity, and self-determination in shaping the nation's future.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+      
+      
+<section id="works" class="min-h-screen bg-neutral-900 py-16 px-6">
+  <div class="max-w-screen-xl mx-auto" data-aos="fade-up">
+
+    <!-- Section Header -->
+    <div class="text-center" data-aos="zoom-in">
+      <h2 class="text-5xl font-extrabold text-yellow-500">Works Page</h2>
+      <p class="text-lg text-gray-400 mt-4 text-center">
+        Understanding the historical background and key themes of <i>The Philippines a Century Hence</i>.
+      </p>
+      
+    </div>
+
+    <!-- Historical Context -->
+    <div class="mt-16 flex flex-col md:flex-row items-center gap-12" data-aos="fade-right">
+      
+      <!-- Text Content -->
+      <div class="md:w-2/3">
+        <h3 class="text-3xl font-bold text-yellow-400">Historical Context</h3>
+        <p class="text-lg text-gray-300 mt-4 leading-relaxed text-justify">
+          <i>The Philippines a Century Hence</i> (<i>Filipinas Dentro de Cien Años</i>) was written between 
+          September 30, 1889, and February 1, 1890. Published as a four-part series in 
+          <i>La Solidaridad</i>, it was both a historical analysis and a vision of the country’s future under 
+          Spanish rule. Rizal wrote during a time of growing oppression, censorship, and economic hardship, 
+          when Filipinos faced forced labor (<i>polo y servicios</i>), excessive taxation, and unjust laws.
+        </p>
+        <p class="text-lg text-gray-300 mt-4 leading-relaxed text-justify">
+          Despite demands for reform, Spain resisted change. Rizal, a key figure in the Propaganda 
+          Movement, sought to awaken national consciousness. He analyzed other nations that had undergone 
+          colonization and revolution, using history to predict the Philippines' possible futures.
+        </p>
+      </div>
+
+      <!-- Decorative Divider -->
+      <div class="hidden md:block md:w-1/3 border-l-4 border-yellow-500 h-48" data-aos="fade-left"></div>
+
+    </div>
+
+    <!-- Key Predictions and Analysis -->
+    <div class="mt-16 flex flex-col md:flex-row-reverse items-center gap-12" data-aos="fade-left">
+      
+      <!-- Text Content -->
+      <div class="md:w-2/3">
+        <h3 class="text-3xl font-bold text-yellow-400">Key Predictions and Analysis</h3>
+        <p class="text-lg text-gray-300 mt-4 leading-relaxed text-justify">
+          Rizal outlined three possible futures for the Philippines, shaped by Spain’s actions and the 
+          Filipino people's response:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-300 mt-4 space-y-3 text-justify">
+          <li><b>Assimilation into Spain:</b> If Spain granted equal rights and representation, the Philippines 
+            could become a Spanish province, leading to progress. However, Rizal doubted Spain’s willingness 
+            to grant reforms.</li>
+          <li><b>Continued Oppression and Revolution:</b> Rizal warned that further oppression would spark 
+            unrest and revolution, as seen in other colonies like the United States.</li>
+          <li><b>Independence:</b> If Spain refused reforms, Filipinos would eventually fight for sovereignty. 
+            He emphasized that no nation could remain enslaved forever.</li>
+        </ul>
+        <p class="text-lg text-gray-300 mt-4 leading-relaxed text-justify">
+          Rizal believed that history proved Spain’s control would not last. He urged Filipinos to prepare for 
+          self-rule by strengthening their national identity and knowledge.
+        </p>
+      </div>
+
+      <!-- Decorative Divider -->
+      <div class="hidden md:block md:w-1/3 border-r-4 border-yellow-500 h-48" data-aos="fade-right"></div>
+
+    </div>
+
+    <!-- Themes and Key Messages -->
+    <div class="mt-16 flex flex-col md:flex-row items-center gap-12" data-aos="fade-right">
+      
+      <!-- Text Content -->
+      <div class="md:w-2/3">
+        <h3 class="text-3xl font-bold text-yellow-400">Themes and Key Messages</h3>
+        <ul class="list-disc list-inside text-lg text-gray-300 mt-4 space-y-3 text-justify">
+          <li><b>The Role of Education:</b> Rizal stressed that education was crucial for national progress, 
+            self-governance, and resistance against oppression.</li>
+          <li><b>The Dangers of Colonialism:</b> He exposed how Spain’s rule drained the Philippines’ wealth, 
+            suppressed intellectual growth, and created social divisions.</li>
+          <li><b>The Power of Nationalism:</b> He called for unity among Filipinos, urging them to embrace 
+            their national identity as a path to liberation.</li>
+        </ul>
+      </div>
+
+      <!-- Decorative Divider -->
+      <div class="hidden md:block md:w-1/3 border-l-4 border-yellow-500 h-48" data-aos="fade-left"></div>
+
+    </div>
+
+    <!-- Relevance Today -->
+    <div class="mt-16 flex flex-col md:flex-row-reverse items-center gap-12" data-aos="fade-right">
+      
+      <!-- Text Content -->
+      <div class="md:w-2/3">
+        <h3 class="text-3xl font-bold text-yellow-400">Relevance Today</h3>
+        <p class="text-lg text-gray-300 mt-4 leading-relaxed text-justify">
+          Rizal’s predictions came true—Spain refused reforms, leading to the 1896 Philippine Revolution. 
+          Though Rizal advocated for peaceful change, his ideas inspired revolutionaries who ultimately won 
+          independence in 1898.
+        </p>
+        <p class="text-lg text-gray-300 mt-4 leading-relaxed text-justify">
+          Today, <i>The Philippines a Century Hence</i> remains relevant, reminding Filipinos of the power of 
+          education, national identity, and resistance against oppression. Rizal’s vision continues to 
+          inspire efforts toward justice, progress, and self-improvement.
+        </p>
+      </div>
+
+      <!-- Decorative Divider -->
+      <div class="hidden md:block md:w-1/3 border-r-4 border-yellow-500 h-48" data-aos="fade-left"></div>
+
+    </div>
+
+  </div>
+</section>
+      
+
+<section id="analysis" class="min-h-screen bg-neutral-900 py-16 px-6">
+  <div class="max-w-screen-xl mx-auto">
+
+    <!-- Section Header -->
+    <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-5xl font-extrabold text-yellow-500">Analysis Page</h2>
+      <p class="text-lg text-gray-400 mt-4">
+        A deeper exploration of the themes and lessons from <i>The Philippines a Century Hence</i>.
+      </p>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+
+      <!-- Enduring Values and Messages -->
+      <div class="bg-neutral-800 p-8 rounded-lg shadow-lg border-l-8 border-yellow-500" 
+        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <h3 class="text-3xl font-bold text-yellow-400">1. Enduring Values and Messages</h3>
+        <p class="text-lg text-gray-300 mt-4 leading-relaxed">
+          Rizal’s essay promotes key values that remain essential today:
+        </p>
+        <div class="mt-4 space-y-4">
+          <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">1</div>
+            <p class="text-lg text-gray-300"><b>Self-Determination:</b> Encouraging national unity and independence.</p>
           </div>
-      
-          <!-- Grid Layout -->
-          <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
-            
-            <!-- Enduring Values and Messages -->
-            <div class="bg-neutral-800 p-8 rounded-lg shadow-lg border-l-8 border-yellow-500">
-              <h3 class="text-3xl font-bold text-yellow-400">1. Enduring Values and Messages</h3>
-              <p class="text-lg text-gray-300 mt-4 leading-relaxed">
-                Rizal’s essay promotes key values that remain essential today:
-              </p>
-              <div class="mt-4 space-y-4">
-                <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">1</div>
-                  <p class="text-lg text-gray-300"><b>Self-Determination:</b> Encouraging national unity and independence.</p>
-                </div>
-                <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">2</div>
-                  <p class="text-lg text-gray-300"><b>Education:</b> The key to national empowerment and progress.</p>
-                </div>
-                <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">3</div>
-                  <p class="text-lg text-gray-300"><b>Good Governance:</b> Advocating for accountability and responsible leadership.</p>
-                </div>
-              </div>
-              <p class="text-lg text-gray-300 mt-6 leading-relaxed">
-                Rizal’s ideas continue to inspire Filipinos to take active roles in building a just and progressive nation.
-              </p>
-            </div>
-      
-            <!-- Understanding Colonialism -->
-            <div class="bg-neutral-800 p-8 rounded-lg shadow-lg border-r-8 border-yellow-500">
-              <h3 class="text-3xl font-bold text-yellow-400">2. Understanding Colonialism</h3>
-              <p class="text-lg text-gray-300 mt-4 leading-relaxed">
-                Rizal critically analyzed the consequences of Spanish colonial rule, highlighting:
-              </p>
-              <div class="mt-4 space-y-4">
-                <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">1</div>
-                  <p class="text-lg text-gray-300"><b>Spanish Oppression:</b> Suppression of Filipino identity and exploitation of resources.</p>
-                </div>
-                <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">2</div>
-                  <p class="text-lg text-gray-300"><b>Effects of Colonialism:</b> Long-lasting poverty, political instability, and cultural erosion.</p>
-                </div>
-                <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">3</div>
-                  <p class="text-lg text-gray-300"><b>Global Context:</b> Similar colonial struggles, such as India's experience under British rule.</p>
-                </div>
-              </div>
-              <p class="text-lg text-gray-300 mt-6 leading-relaxed">
-                His warnings remain relevant today, reminding nations to protect sovereignty and cultural heritage.
-              </p>
-            </div>
-      
+          <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">2</div>
+            <p class="text-lg text-gray-300"><b>Education:</b> The key to national empowerment and progress.</p>
+          </div>
+          <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">3</div>
+            <p class="text-lg text-gray-300"><b>Good Governance:</b> Advocating for accountability and responsible leadership.</p>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section class="min-h-screen bg-neutral-900 py-16 px-6">
-        <div class="max-w-screen-xl mx-auto">
-          
-          <!-- Section Header -->
-          <div class="text-center">
-            <h2 class="text-5xl font-extrabold text-yellow-500">Gallery</h2>
-            <p class="text-lg text-gray-400 mt-4">
-              Explore historical images, handwritten notes, and multimedia related to <i>The Philippines a Century Hence</i>.
-            </p>
+      <!-- Understanding Colonialism -->
+      <div class="bg-neutral-800 p-8 rounded-lg shadow-lg border-r-8 border-yellow-500" 
+        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <h3 class="text-3xl font-bold text-yellow-400">2. Understanding Colonialism</h3>
+        <p class="text-lg text-gray-300 mt-4 leading-relaxed">
+          Rizal critically analyzed the consequences of Spanish colonial rule, highlighting:
+        </p>
+        <div class="mt-4 space-y-4">
+          <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">1</div>
+            <p class="text-lg text-gray-300"><b>Spanish Oppression:</b> Suppression of Filipino identity and exploitation of resources.</p>
           </div>
-      
-          <!-- Image Grid -->
-          <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <div class="relative group bg-gray-700 h-64 flex items-center justify-center rounded-lg shadow-lg">
-              <img src="src/images/title.jpg" alt="The Philippines a Century Hence"
-                class="w-full h-full object-cover rounded-lg shadow-lg border-4">
-            </div>
-            <div class="relative group bg-gray-700 h-64 flex items-center justify-center rounded-lg shadow-lg">
-              <img src="src/images/map.jpg" alt="The Philippines a Century Hence"
-                class="w-full h-full object-contain rounded-lg shadow-lg border-4">
-            </div>
-            <div class="relative group bg-gray-700 h-64 flex items-center justify-center rounded-lg shadow-lg">
-              <img src="src/images/quote.png" alt="The Philippines a Century Hence"
-                class="w-full h-full object-fit rounded-lg shadow-lg border-4">
-            </div>
-            <div class="relative group bg-gray-700 h-64 flex items-center justify-center rounded-lg shadow-lg">
-              <img src="src/images/definition.jpg" alt="The Philippines a Century Hence"
-                class="w-full h-full object-cover rounded-lg shadow-lg border-4">
-            </div>
-            <div class="relative group bg-gray-700 h-64 flex items-center justify-center rounded-lg shadow-lg">
-              <img src="src/images/pinterest.jpg" alt="The Philippines a Century Hence"
-                class="w-full h-full object-cover rounded-lg shadow-lg border-4">
-            </div>
-            <div class="relative group bg-gray-700 h-64 flex items-center justify-center rounded-lg shadow-lg">
-              <img src="src/images/circles.png" alt="The Philippines a Century Hence"
-                class="w-full h-full object-cover rounded-lg shadow-lg border-4">
-            </div>
+          <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">2</div>
+            <p class="text-lg text-gray-300"><b>Effects of Colonialism:</b> Long-lasting poverty, political instability, and cultural erosion.</p>
           </div>
-      
-          <!-- Video Section -->
-          <div class="mt-16 text-center">
-            <h3 class="text-3xl font-bold text-yellow-400">Videos on Rizal’s Impact</h3>
-            <p class="text-lg text-gray-400 mt-4">
-              Learn more about the historical significance and impact of <i>The Philippines a Century Hence</i>.
-            </p>
-            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div class="bg-gray-700 h-80 flex items-center justify-center rounded-lg shadow-lg">
-                <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/_ySiQYJyjRQ"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-              <div class="bg-gray-700 h-80 flex items-center justify-center rounded-lg shadow-lg">
-                <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/1bw3zBKY_3M"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </div>
+          <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">3</div>
+            <p class="text-lg text-gray-300"><b>Global Context:</b> Similar colonial struggles, such as India's experience under British rule.</p>
           </div>
-      
         </div>
-      </section>
+      </div>
 
-      <section class="min-h-screen bg-neutral-900 py-16 px-6">
-        <div class="max-w-screen-xl mx-auto">
-      
-          <!-- Section Header -->
-          <div class="text-center mb-12">
-            <h2 class="text-5xl font-extrabold text-yellow-500 drop-shadow-lg">📚 Resources</h2>
-            <p class="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">
-              Explore primary sources, scholarly articles, and external references related to <i>The Philippines a Century Hence</i>.
-            </p>
+      <!-- Relevance in Modern Society -->
+      <div class="bg-neutral-800 p-8 rounded-lg shadow-lg border-l-8 border-yellow-500 md:col-span-2" 
+        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <h3 class="text-3xl font-bold text-yellow-400">3. Relevance in Modern Society</h3>
+        <p class="text-lg text-gray-300 mt-4 leading-relaxed">
+          Many of Rizal’s concerns still resonate in today’s world. His advocacy for education, nationalism, and self-governance
+          can be seen in modern movements fighting for democracy and human rights.
+        </p>
+        <div class="mt-6 space-y-4">
+          <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">1</div>
+            <p class="text-lg text-gray-300"><b>Press Freedom:</b> Advocating against misinformation and censorship.</p>
           </div>
+          <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">2</div>
+            <p class="text-lg text-gray-300"><b>Economic Independence:</b> Promoting sustainable local industries over foreign dependency.</p>
+          </div>
+          <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="w-12 h-12 flex items-center justify-center bg-yellow-500 text-neutral-900 rounded-full font-bold text-xl">3</div>
+            <p class="text-lg text-gray-300"><b>Equality & Human Rights:</b> Advocating against social injustices and discrimination.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
       
-          <!-- Resources Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            
-            <!-- Primary Sources -->
-            <div
-              class="group bg-gray-800 p-6 rounded-xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
-              <div class="flex items-center gap-4">
-                <div class="bg-yellow-500 p-4 rounded-full text-black text-3xl">📜</div>
-                <h3 class="text-3xl font-bold text-yellow-400">Primary Sources</h3>
-              </div>
-              <p class="text-gray-300 mt-4">
-                Read the full text of <i>The Philippines a Century Hence</i> as written by José Rizal.
-              </p>
-              <a href="https://archive.org/details/philippinescentu00rizauoft" target="_blank"
-                class="mt-4 inline-block text-yellow-500 font-semibold hover:text-yellow-400 transition">
-                📖 Read Now →
-              </a>
-            </div>
+
+<section id="gallery" class="min-h-screen bg-neutral-900 py-16 px-6">
+  <div class="max-w-screen-xl mx-auto">
     
-            <!-- Scholarly Articles -->
-            <div
-              class="group bg-gray-800 p-6 rounded-xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
-              <div class="flex items-center gap-4">
-                <div class="bg-yellow-500 p-4 rounded-full text-black text-3xl">📖</div>
-                <h3 class="text-3xl font-bold text-yellow-400">Scholarly Articles</h3>
-              </div>
-              <p class="text-gray-300 mt-4">
-                Explore academic studies and critical analyses of Rizal’s work.
-              </p>
-              <a href="https://books.google.com.ph/books?hl=en&lr=&id=Zbw4AQAAIAAJ&oi=fnd&pg=PA9&dq=The+Philippines+a+Century+Hence+Rizal&ots=DqfPxsJFhj&sig=_8p_H7OGr0PykCnhaEYxYsPVai0&redir_esc=y#v=onepage&q=The%20Philippines%20a%20Century%20Hence%20Rizal&f=false"
-                target="_blank" class="mt-4 inline-block text-yellow-500 font-semibold hover:text-yellow-400 transition">
-                🔍 View Articles →
-              </a>
-            </div>
-    
-            <!-- Other Relevant Websites -->
-            <div
-              class="group bg-gray-800 p-6 rounded-xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
-              <div class="flex items-center gap-4">
-                <div class="bg-yellow-500 p-4 rounded-full text-black text-3xl">🔗</div>
-                <h3 class="text-3xl font-bold text-yellow-400">Other Websites</h3>
-              </div>
-              <p class="text-gray-300 mt-4">
-                Discover additional resources on José Rizal’s life, works, and legacy.
-              </p>
-              <a href="https://joserizal.com" target="_blank"
-                class="mt-4 inline-block text-yellow-500 font-semibold hover:text-yellow-400 transition">
-                🌎 Explore More →
-              </a>
-            </div>
-      
-          </div>
-      
+    <!-- Section Header -->
+    <div class="text-center" data-aos="fade-up">
+      <h2 class="text-5xl font-extrabold text-yellow-500">Gallery</h2>
+      <p class="text-lg text-gray-400 mt-4">
+        Explore historical images, handwritten notes, and multimedia related to <i>The Philippines a Century Hence</i>.
+      </p>
+    </div>
+
+    <!-- Image Grid -->
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="relative group bg-gray-700 h-64 flex items-center justify-center rounded-lg shadow-lg" data-aos="fade-up">
+        <img src="src/images/title.jpg" alt="The Philippines a Century Hence"
+          class="w-full h-full object-cover rounded-lg shadow-lg border-4">
+      </div>
+      <div class="relative group bg-gray-700 h-64 flex items-center justify-center rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+        <img src="src/images/map.jpg" alt="The Philippines a Century Hence"
+          class="w-full h-full object-contain rounded-lg shadow-lg border-4">
+      </div>
+      <div class="relative group bg-gray-700 h-64 flex items-center justify-center rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+        <img src="src/images/quote.png" alt="The Philippines a Century Hence"
+          class="w-full h-full object-fit rounded-lg shadow-lg border-4">
+      </div>
+      <div class="relative group bg-gray-700 h-64 flex items-center justify-center rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+        <img src="src/images/definition.jpg" alt="The Philippines a Century Hence"
+          class="w-full h-full object-cover rounded-lg shadow-lg border-4">
+      </div>
+      <div class="relative group bg-gray-700 h-64 flex items-center justify-center rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="400">
+        <img src="src/images/pinterest.jpg" alt="The Philippines a Century Hence"
+          class="w-full h-full object-cover rounded-lg shadow-lg border-4">
+      </div>
+      <div class="relative group bg-gray-700 h-64 flex items-center justify-center rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="500">
+        <img src="src/images/circles.png" alt="The Philippines a Century Hence"
+          class="w-full h-full object-cover rounded-lg shadow-lg border-4">
+      </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="mt-16 text-center" data-aos="fade-up">
+      <h3 class="text-3xl font-bold text-yellow-400">Videos on Rizal’s Impact</h3>
+      <p class="text-lg text-gray-400 mt-4">
+        Learn more about the historical significance and impact of <i>The Philippines a Century Hence</i>.
+      </p>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-gray-700 h-80 flex items-center justify-center rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/_ySiQYJyjRQ"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
         </div>
-      </section>
+        <div class="bg-gray-700 h-80 flex items-center justify-center rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+          <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/1bw3zBKY_3M"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="resources" class="min-h-screen bg-neutral-900 py-16 px-6">
+  <div class="max-w-screen-xl mx-auto" data-aos="fade-up">
+
+    <!-- Section Header -->
+    <div class="text-center mb-12" data-aos="fade-down">
+      <h2 class="text-5xl font-extrabold text-yellow-500 drop-shadow-lg">📚 Resources</h2>
+      <p class="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">
+        Explore primary sources, scholarly articles, and external references related to <i>The Philippines a Century Hence</i>.
+      </p>
+    </div>
+
+    <!-- Resources Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      
+      <!-- Primary Sources -->
+      <div class="group bg-gray-800 p-6 rounded-xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl" data-aos="zoom-in">
+        <div class="flex items-center gap-4">
+          <div class="bg-yellow-500 p-4 rounded-full text-black text-3xl">📜</div>
+          <h3 class="text-3xl font-bold text-yellow-400">Primary Sources</h3>
+        </div>
+        <p class="text-gray-300 mt-4">
+          Read the full text of <i>The Philippines a Century Hence</i> as written by José Rizal.
+        </p>
+        <a href="https://archive.org/details/philippinescentu00rizauoft" target="_blank" class="mt-4 inline-block text-yellow-500 font-semibold hover:text-yellow-400 transition">
+          📖 Read Now →
+        </a>
+      </div>
+
+      <!-- Scholarly Articles -->
+      <div class="group bg-gray-800 p-6 rounded-xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl" data-aos="zoom-in">
+        <div class="flex items-center gap-4">
+          <div class="bg-yellow-500 p-4 rounded-full text-black text-3xl">📖</div>
+          <h3 class="text-3xl font-bold text-yellow-400">Scholarly Articles</h3>
+        </div>
+        <p class="text-gray-300 mt-4">
+          Explore academic studies and critical analyses of Rizal’s work.
+        </p>
+        <a href="https://books.google.com.ph/books?hl=en&lr=&id=Zbw4AQAAIAAJ&oi=fnd&pg=PA9&dq=The+Philippines+a+Century+Hence+Rizal&ots=DqfPxsJFhj&sig=_8p_H7OGr0PykCnhaEYxYsPVai0&redir_esc=y#v=onepage&q=The%20Philippines%20a%20Century%20Hence%20Rizal&f=false"
+          target="_blank" class="mt-4 inline-block text-yellow-500 font-semibold hover:text-yellow-400 transition">
+          🔍 View Articles →
+        </a>
+      </div>
+
+      <!-- Other Relevant Websites -->
+      <div class="group bg-gray-800 p-6 rounded-xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl" data-aos="zoom-in">
+        <div class="flex items-center gap-4">
+          <div class="bg-yellow-500 p-4 rounded-full text-black text-3xl">🔗</div>
+          <h3 class="text-3xl font-bold text-yellow-400">Other Websites</h3>
+        </div>
+        <p class="text-gray-300 mt-4">
+          Discover additional resources on José Rizal’s life, works, and legacy.
+        </p>
+        <a href="https://joserizal.com" target="_blank"
+          class="mt-4 inline-block text-yellow-500 font-semibold hover:text-yellow-400 transition">
+          🌎 Explore More →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
       
       
       
       
       
       
-      
-      
-      
-    
+
+      <script>
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 60, // Adjust for fixed navbar
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('navbar-menu').classList.toggle('hidden');
+        });
+        </script>
+        
+        <script>
+          AOS.init({
+            duration: 1000, // Animation duration (in milliseconds)
+            once: false,     // Allow animations to replay when scrolling up and down
+            mirror: true     // Trigger animations when scrolling back up
+          });
+        </script>
+        
+
     
 </body>
 </html>
